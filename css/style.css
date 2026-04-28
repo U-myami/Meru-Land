@@ -1,0 +1,423 @@
+/* ローカルでインストールしているフォントを使用したいときは以下の方法で実装可能 */
+@font-face {
+  font-family: "Doki";
+  src: url(/font/DokiDokiFont2/DokiDokiFantasia.otf) format("opentype");
+}
+
+/* font-family: "Doki", sans-serif; */
+/* 全体適用 */
+
+header {
+  background-image: url(../picture/header/header_background.png);
+  background-size: cover; /* 背景画像のすべてを表示 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* logomove */
+.logo img {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* change size */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* menu全体 */
+nav {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul {
+  font-family: "Doki", sans-serif;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+  margin: 10px;
+  padding: 0;
+
+  list-style: none;
+  flex-wrap: nowrap; /* 強制1列にする */
+}
+
+.menu ul li {
+  font-size: 90%;
+}
+
+/* button */
+.menu ul li a {
+  display: inline-block;
+  padding: 4px 10px;
+  background: linear-gradient(45deg, #ffb6c1, #ffd1dc);
+  color: rgb(252, 134, 175);
+  text-decoration: none;
+  border-radius: 999px; /* 完全に丸ボタン */
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 1px; /* 文字間の余白 */
+  transition: 0.3s;
+}
+
+/* button move */
+.menu ul li a:hover {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* hero */
+.hero {
+  background-image: url(../picture/background/hero_backgtound.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 250px;
+}
+
+.slider {
+  position: relative;
+  width: 70%;
+  max-width: 600px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  margin: 0 auto; /* 中央維持 */
+
+  /* 影を付けて立体感を出す */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* スライドショー */
+.s1 {
+  animation: slide 9s infinite;
+}
+.s2 {
+  animation: slide 9s infinite 3s;
+}
+.s3 {
+  animation: slide 9s infinite 6s;
+}
+
+/* フレーム管理 */
+@keyframes slide {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 各section */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  display: flex;
+  flex-direction: column; /* これ入れないとh2とcategoryが横並びになる */
+  justify-content: center;
+}
+
+h2 {
+  font-family: "Doki", sans-serif;
+  font-size: 50px;
+  font-weight: lighter;
+  color: rgb(127, 186, 245);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* category */
+.category {
+  background-image: url(../picture/background/categoryes/category_back.png);
+  background-size: contain;
+  background-position: center;
+}
+
+.cate_flexbox {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  gap: 15px;
+
+  justify-content: center;
+
+  margin-bottom: 30px;
+}
+
+.cate_items {
+  text-align: center;
+  flex-direction: column; /* 縦並び */
+  align-items: center; /* 横中央 */
+  justify-content: center; /* 縦中央 */
+
+  /* カードっぽく */
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+
+  /* 影を付けて立体感を出す */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+
+.cate_items img {
+  width: 80px;
+  height: auto;
+  object-fit: contain; /* 画像の比率を固定 */
+  display: block;
+
+  margin: 0 auto; /* 初期設定の余白を消す */
+}
+
+.cate_items p {
+  font-family: "Doki", sans-serif;
+  font-size: 30px;
+  color: red;
+  margin: 1px 0 0;
+}
+
+.favorite {
+  background-image: url(../picture/background/categoryes/favorite_back.png);
+  background-size: contain;
+  background-position: center;
+
+  margin: 0 auto;
+}
+
+.favorite_items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.favo_items {
+  width: 150px;
+
+  padding: 0 10px;
+
+  border-radius: 20px;
+  background-color: white;
+
+  /* 影を付けて立体感を出す */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+
+  /* 浮く動き */
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.favo_items:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+}
+
+.favo_items p {
+  margin: 5px 0;
+}
+
+.favo_items img {
+  width: 100%;
+  height: auto;
+}
+
+.favo_items_name,
+.favo_price {
+  text-align: center;
+}
+
+/* new */
+.new {
+  background-image: url(../picture/background/categoryes/new_back.png);
+  background-size: contain;
+  background-position: center;
+}
+
+.new_items {
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 24px;
+}
+
+.new_card {
+  width: 30%; /* 3枚並べるので3等分 */
+  max-width: 200px;
+
+  text-align: center;
+  background: white;
+  border-radius: 15px;
+  padding: 8px;
+
+  /* 影を付けて立体感を出す */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+
+  /* 浮く動き */
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.new_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+}
+
+.new_card p {
+  margin: 5px 0;
+}
+
+.new_card img {
+  width: 100%;
+  height: auto;
+}
+
+/* special */
+.special {
+  background-image: url(../picture/background/categoryes/special_back.png);
+  background-size: contain;
+  background-position: center;
+}
+
+.special_items {
+  position: relative;
+
+  width: 300px;
+  margin: 0 auto 20px;
+
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: white;
+
+  /* 影を付けて立体感を出す */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+
+  /* 浮く動き */
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.special_items img {
+  width: 100%;
+  height: auto;
+}
+
+.special_items:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+}
+
+.special_items p {
+  font-family: "Doki", sans-serif;
+  font-size: 30px;
+  color: rgb(255, 165, 165);
+  margin: 5px 0;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  background: gold;
+  color: black;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+/* notice */
+.notice {
+  background-image: url(../picture/background/categoryes/notice_back.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.notice_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+
+  padding: 0;
+  margin: 0 20px 20px; /* 上　左右　下 */
+
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.notice_list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 10px;
+}
+
+.notice_list a {
+  text-decoration: none; /* 元の下線部を削除 */
+
+  border-bottom: 2px dashed rgb(44, 44, 44); /* 下線部 */
+}
+
+.date {
+  min-width: 100px;
+}

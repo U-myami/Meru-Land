@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Meru Land</title>
+
+    <!--- 共有CSSを上に --->
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="">
+          <img src="./picture/logo/Meru Land.png" alt="Meru Land" />
+        </a>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="category/index.html">CATEGORY</a></li>
+          <li><a href="favorite/index.html">FAVORITE</a></li>
+          <li><a href="new/index.html">NEW</a></li>
+          <li><a href="special/index.html">SPECIAL</a></li>
+          <li><a href="notice/index.html">NOTICE</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--- テーマパークの入り口アーチのように表現する --->
+      <section class="hero">
+        <div class="slider">
+          <img src="picture/sample/slide_alt1.jpeg" class="slide s1" />
+          <img src="picture/sample/slide_alt2.jfif" class="slide s2" />
+          <img src="picture/sample/slide_alt3.jfif" class="slide s3" />
+        </div>
+      </section>
+
+      <!--- カテゴリ --->
+      <section class="category container">
+        <h2>category</h2>
+
+        <div class="cate_flexbox">
+          <div class="cate_items">
+            <img src="./picture/icon/item1.png" />
+            <p>アイテム1</p>
+          </div>
+          <div class="cate_items">
+            <img src="./picture/icon/item2.png" />
+            <p>アイテム2</p>
+          </div>
+          <div class="cate_items">
+            <img src="./picture/icon/item3.png" />
+            <p>アイテム3</p>
+          </div>
+          <div class="cate_items">
+            <img src="./picture/icon/item4.png" />
+            <p>アイテム4</p>
+          </div>
+          <div class="cate_items">
+            <img src="./picture/icon/item5.jfif" />
+            <p>アイテム5</p>
+          </div>
+          <div class="cate_items">
+            <img src="./picture/icon/item6.jfif" />
+            <p>アイテム6</p>
+          </div>
+        </div>
+      </section>
+
+      <!--- 人気 --->
+      <section class="favorite container">
+        <h2>favorite</h2>
+
+        <div class="favorite_items">
+          <div class="favo_items">
+            <p class="favo_rank">１番人気</p>
+            <img src="picture/icon/item2.png" ,alt="1位" />
+            <p class="favo_items_name">商品名1</p>
+            <p class="favo_price">￥2,300</p>
+          </div>
+          <div class="favo_items">
+            <p class="favo_rank">２番人気</p>
+            <img src="picture/icon/item3.png" ,alt="2位" />
+            <p class="favo_items_name">商品名2</p>
+            <p class="favo_price">￥3,500</p>
+          </div>
+
+          <div class="favo_items">
+            <p class="favo_rank">３番人気</p>
+            <img src="picture/icon/item1.png" ,alt="3位" />
+            <p class="favo_items_name">商品名3</p>
+            <p class="favo_price">￥1,800</p>
+          </div>
+        </div>
+      </section>
+
+      <!--- 新商品 --->
+      <section class="new container">
+        <h2>new</h2>
+
+        <div class="new_items">
+          <div class="new_card">
+            <p>新商品１</p>
+            <img src="picture/icon/item1.png" alt="商品１" />
+            <p>￥2,800</p>
+          </div>
+          <div class="new_card">
+            <p>新商品２</p>
+            <img src="picture/icon/item2.png" alt="商品２" />
+            <p>￥1.500</p>
+          </div>
+          <div class="new_card">
+            <p>新商品３</p>
+            <img src="picture/icon/item3.png" alt="商品３" />
+            <p>￥800</p>
+          </div>
+        </div>
+      </section>
+
+      <!--- 限定 --->
+      <section class="special container">
+        <h2>special</h2>
+
+        <div class="special_items">
+          <!--- 目玉商品 --->
+          <span class="badge">季節限定</span>
+          <img src="picture/icon/item5.jfif" ,alt="季節限定" />
+          <p>季節限定商品</p>
+          <p>￥3,000</p>
+        </div>
+      </section>
+
+      <!--- お知らせ --->
+      <section class="notice container">
+        <h2>notice</h2>
+
+        <!--- 4つぐらいお知らせを掲載する --->
+        <ul class="notice_list">
+          <li>
+            <span class="date">2026.04.01</span>
+            <a href="#">ホームページのUI,UXの改良のお知らせ</a>
+          </li>
+          <li>
+            <span class="date">2026.04.16</span>
+            <a href="#">限定商品入荷のお知らせ</a>
+          </li>
+          <li>
+            <span class="date">2026.04.20</span>
+            <a href="#">緊急メンテナンスのお知らせ</a>
+          </li>
+          <li>
+            <span class="date">2026.04.27</span>
+            <a href="#">GWセール開催のお知らせ</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © Meru Land Inc All rights reserved.</p>
+    </footer>
+
+    <!--- カートアイコン --->
+    <div class="cart">
+      <a href="./cart/index.html"
+        ><img src="./picture/icon/cart.png" alt="カートアイコン"
+      /></a>
+    </div>
+  </body>
+</html>
