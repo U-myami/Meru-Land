@@ -1,7 +1,7 @@
 /* ローカルでインストールしているフォントを使用したいときは以下の方法で実装可能 */
 @font-face {
   font-family: "Doki";
-  src: url(/font/DokiDokiFont2/DokiDokiFantasia.otf) format("opentype");
+  src: url(../font/DokiDokiFont2/DokiDokiFantasia.otf) format("opentype"); /* 相対パスにする */
 }
 
 /* font-family: "Doki", sans-serif; */
