@@ -451,7 +451,7 @@ h2 {
 .notice_list li::after {
   content: "";
   position: absolute;
-  left: 126px; /* 日付の幅分は下線部部分をずらして、開始位置とする */
+  left: 116px; /* 日付の幅分は下線部部分をずらして、開始位置とする */
   width: 60%; /* 下線部の長さ調整(右へ) */
   bottom: 0;
 
